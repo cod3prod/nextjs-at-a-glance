@@ -1,6 +1,6 @@
-import Examples from './components/examples';
-import Essentials from './components/essentials';
-import Header from './components/header';
+import Examples from '../components/examples';
+import Essentials from '../components/essentials';
+import Header from '../components/header';
 import '@/styles/global.css';
 
 export default function Page() {
