@@ -16,7 +16,7 @@ export default function Header() {
           />
         </div>
       </div>
-      <h1 className="header-title">Next.js Essentials</h1>
+      <h1 className="header-title text-4xl">Next.js Essentials</h1>
       <p className="header-subtitle">Next.js project를 만들기 위한 핵심 요소</p>
     </header>
   );
