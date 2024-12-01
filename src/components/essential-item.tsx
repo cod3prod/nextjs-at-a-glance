@@ -3,7 +3,7 @@
 import Image from "next/image";
 import { EssentialProps } from "@/types/data";
 
-export default function Essential(props: EssentialProps) {
+export default function EssentialItem(props: EssentialProps) {
   const { image, title, description } = props;
   return (
     <div className="w-full h-full flex flex-col justify-center items-center ">
