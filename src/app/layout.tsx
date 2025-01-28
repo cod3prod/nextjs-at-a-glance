@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import { Noto_Sans_KR } from "next/font/google";
 import "@/styles/index.css";
+import { twMerge } from "tailwind-merge";
 
 export const metadata: Metadata = {
   title: "Next.js Essentials",
@@ -9,6 +11,12 @@ export const metadata: Metadata = {
   },
 };
 
+const notoSansKR = Noto_Sans_KR({
+  subsets: ["latin"],
+  weight: ["100", "300", "400", "500", "700", "900"],
+  display: "swap",
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -16,7 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ko">
-      <body className="relative min-h-screen flex flex-col">{children}</body>
+      <body
+        className={twMerge(
+          "relative min-h-screen flex flex-col",
+          notoSansKR.className
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }
